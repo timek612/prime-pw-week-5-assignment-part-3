@@ -61,8 +61,8 @@ console.log('***** Music Collection *****')
 */
 let collection = [];
 
-function addToCollection (title, artist, yearPublished) {
-    let object1 = {
+function addToCollection (title, artist, yearPublished) {  
+  let object1 = {
         title: title,
         artist: artist,
         yearPublished: yearPublished
@@ -71,9 +71,20 @@ function addToCollection (title, artist, yearPublished) {
     return object1;
 }
 
-function showCollection.apply(this, Array) {
-    
+function showCollection (array) {
+  console.log(array.length);
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i].title, 'by', array[i].artist, 'published in', array[i].yearPublished);
+  }
 }
+
+function findByArtist (artist) {
+  
+}
+
+
+    
+
 
 console.log(addToCollection ('Palaces', 'Flume', '2022'));
 console.log(addToCollection ('Hi this is Flume', 'Flume', '2019'));
@@ -83,5 +94,5 @@ console.log(addToCollection ('ALL-AMERIKKKAN BADA$$', 'Joey Bada$$', '2017'));
 console.log(addToCollection ('good kid, m.A.A.d city', 'Kendrick Lamar', '2012'));
 console.log(collection);
 
-
+showCollection(collection);
 
