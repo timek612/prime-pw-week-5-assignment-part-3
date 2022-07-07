@@ -78,12 +78,23 @@ function showCollection (array) {
   }
 }
 
+// If the artist inputted when the function is called matches any artists in my 6 albums, add those albums to the array.
+let artistFound = [];
+let noArtistsFound = [];
 function findByArtist (artist) {
-  
+  for (let i = 0; i < collection.length; i++) {
+    if (artist === collection[i].artist) {
+      artistFound.push(artist);
+        
+      return console.log(artistFound);
+    }
+    
+  }
+  return console.log(noArtistsFound);
 }
 
 
-    
+
 
 
 console.log(addToCollection ('Palaces', 'Flume', '2022'));
@@ -96,3 +107,9 @@ console.log(collection);
 
 showCollection(collection);
 
+findByArtist('Flume');
+findByArtist('Kendrick Lamar');
+findByArtist('Joey Bada$$')
+findByArtist('AJ');
+findByArtist('Dookey');
+findByArtist('Beach house')
